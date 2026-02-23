@@ -26,7 +26,7 @@ Se inscreva e assista os PodCasts <https://linktr.ee/vishubfurb>
 
 Ler com **muita ATENÇÃO**, e em caso de dúvida me questionem.
 
-- Quantidade de créditos: 6 + 1 (atividades em casa)
+- Quantidade de créditos: 8 
 - Sala de aula invertida
 - Divisão das unidades e conteúdo de cada unidade
 - Avaliações: prazos nas atividades no AVA3 dentro das unidades, e no cronograma
