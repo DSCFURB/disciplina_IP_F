@@ -1,0 +1,17 @@
+@startuml
+skinparam activity {
+  BackgroundColor White
+  BorderColor #A80036
+  ArrowColor #A80036
+  FontName Arial
+}
+
+start
+
+:ler(nota1, nota2, nota3, nome);
+:soma = nota1 + nota2 + nota3;
+:resultado = soma / 3;
+:escrever(resultado);
+
+stop
+@enduml
