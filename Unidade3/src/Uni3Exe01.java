@@ -6,8 +6,6 @@ dimensões de um terreno e depois exibir a área do terreno.
 
 __ Análise: OK
 
-__ Gordura: 
-
 Uma imobiliária vende apenas Faça um programa para 
 
 //__ Entradas: 
