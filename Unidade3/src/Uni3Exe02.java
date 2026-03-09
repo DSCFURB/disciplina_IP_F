@@ -11,8 +11,6 @@ O valor do desconto é de R$ xxx O preço do par de sapatos com desconto é R$ x
 
 __ Análise: OK
 
-__ Gordura: 
-
 Uma loja de calçados está concedendo Escreva um programa para calcular e exibir
 o
 
