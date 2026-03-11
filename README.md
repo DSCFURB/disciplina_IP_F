@@ -14,7 +14,7 @@ Olá, seja bem vindo .. 😁
 
 Este é o principal material da disciplina de Introdução à Programação, e ele está sendo disponibilizado no GitHub. O conteúdo está dividido em 6 (seis) unidades (pastas), seguindo o proposto no plano de ensino. Cada unidade tem um texto de apoio e suas respectivas videoaulas, atividades, e ainda, várias anotações feitas em aula.
 
-Para se localizar em relação aos dias de aula e o conteúdo que está sendo passado utilize o [Cronograma].
+Para se localizar em relação aos dias de aula e o conteúdo que está sendo passado utilize o [Cronograma]. O cronograma poderá sofrer breves alterações no decorrer do curso. Caso ocorram mudanças, os alunos serão informados previamente pelos canais de comunicação ou em sala de aula.
 
 Também tem a pasta [Exemplos](./Exemplos/src "Exemplos") que contém códigos em Java que podem ser usados nas unidades. Inicialmente é interessante executar o exemplo de código para entender a sua programação, e depois usar partes deste código na atividade em si.
 
