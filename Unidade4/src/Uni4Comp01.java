@@ -14,7 +14,7 @@ fim se
 
 import java.util.Scanner;
 
-public class Uni4Exe06 {
+public class Uni4Comp01.java {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);
 
