@@ -1,43 +1,46 @@
 /*
 __ Enunciado: 
-Uma loja virtual deseja presentear seus clientes mais fiéis. Escreva um programa que leia o nome de um cupom de desconto. Se o cupom digitado for exatamente igual a "SOUFURB", o programa deve exibir a mensagem: "Cupom validado! Você ganhou um adesivo exclusivo."
+Uma loja virtual deseja dar um brinde para categorias específicas de clientes. 
+Escreva um programa que leia um caractere representando o tipo de cupom 
+('S' para Especial, 'C' para Comum). Se o cupom for igual ('==') a 'S', 
+o programa deve exibir a mensagem: "Cupom validado! Você ganhou um adesivo exclusivo."
 
 __ Análise: ok
-__ Gordura: Escreva um programa que leia... exiba que...
-//__ Entradas: ler(cupom)
-//__ Processos: 
-se cupom == "SOUFURB" então
-  mensagem = "Cupom validado! Você ganhou um adesivo exclusivo."
-fim se
-//__ Saídas: imprimir(mensagem)
-*/
+__ Gordura: Uma loja virtual deseja... Escreva um programa que...
+//__ Entradas: 
+ler(tipoCupom)
 
+//__ Processos: 
+se tipoCupom == 'S' então
+  imprimir "Cupom validado! Você ganhou um adesivo exclusivo."
+fim se
+
+//__ Saídas: 
+imprimir(mensagem)
+*/
 import java.util.Scanner;
 
-public class Uni4Comp01.java {
+public class Uni4Comp01 {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);
 
-    // Entrada
-    System.out.print("Digite o cupom: ");
-    String cupom = teclado.next();
+    System.out.print("Tipo de cupom (S/C): ");
+    char tipoCupom = teclado.next().toUpperCase().charAt(0);
 
-    // Processo / Saída
-    if (cupom.equals("SOUFURB")) {
+    if (tipoCupom == 'S') {
       System.out.println("Cupom validado! Você ganhou um adesivo exclusivo.");
     }
 
     teclado.close();
   }
 }
-
 /*
 __ Valores de Testes: 
 _ Caso 1 ___
-cupom = "SOUFURB"
-saída = "Cupom validado! Você ganhou um adesivo exclusivo."
+tipoCupom = 'S'
+Saída = "Cupom validado! Você ganhou um adesivo exclusivo."
 
 _ Caso 2 ___
-cupom = "PROMO10"
-saída = (vazia)
+tipoCupom = 'C'
+Saída = (vazia)
 */
