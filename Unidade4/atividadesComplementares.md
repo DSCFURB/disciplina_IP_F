@@ -4,7 +4,7 @@ Os exercícios abaixo focam na estrutura de **Seleção Simples (if)**, utilizan
 
 ---
 
-## 📝 Lista de Exercícios: Seleção Simples
+## 📝 Lista de Exercícios Complementares: Seleção Simples
 
 ### Uni4Comp01.java
 **Enunciado:** Uma loja virtual deseja presentear seus clientes mais fiéis. Escreva um programa que leia o nome de um cupom de desconto. Se o cupom digitado for exatamente igual a **"SOUFURB"**, o programa deve exibir a mensagem: *"Cupom validado! Você ganhou um adesivo exclusivo."*
