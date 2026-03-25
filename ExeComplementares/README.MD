@@ -1,6 +1,7 @@
 # Lista de Exercícios: Fundamentos de Java
 
-Este arquivo contém os enunciados da disciplina. Cada exercício deve ser resolvido em um arquivo `.java` separado, seguindo rigorosamente o nome da classe indicado.
+> **⚠️ AVISO IMPORTANTE:** > Estes são **exercícios complementares** destinados a auxiliar na compreensão dos conceitos e no desenvolvimento da lógica em Java. 
+> **Não é necessário entregar** estas atividades; elas servem como material de apoio para o seu estudo individual e prática constante.
 
 ---
 
