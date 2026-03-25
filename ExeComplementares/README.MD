@@ -1,97 +1,94 @@
-# 🚀 Lista de Exercícios: Fundamentos de Java
+# Lista de Exercícios: Fundamentos de Java
 
-Este repositório contém uma série de exercícios práticos para o aprendizado de Java, focando em tipos de dados, manipulação de strings, saída no console e entrada de dados via teclado.
+Este arquivo contém os enunciados da disciplina. Cada exercício deve ser resolvido em um arquivo `.java` separado, seguindo rigorosamente o nome da classe indicado.
 
 ---
 
 ## 🟢 Tópico 01: Variáveis & Tipos de Dados
 
-### 01) Meus Dados Primitivos
+### 01) Meus Dados Primitivos [ExeCom0101]
 Crie variáveis com os seus próprios dados e imprima-os no console:
 * `String`: Seu nome completo.
 * `int`: Sua idade.
 * `char`: A inicial do seu nome.
 * `boolean`: Uma variável dizendo se você gosta de café (`true`/`false`).
-* **Saída:** Use `System.out.println` para cada uma.
+* **Classe:** `ExeCom0101.java`
 
-### 02) Ficha de Personagem
+### 02) Personagem Fictício [ExeCom0102]
 Crie variáveis para representar um personagem fictício (pode ser você, um herói, atleta ou mago):
-* **Idade** (`int`)
-* **Altura** (`float`)
-* **Classe** (`char` - use a primeira letra da função)
-* **Status** (`boolean` - está em missão?)
-* **Saída:** Imprima todas as informações detalhadamente.
+* **Idade** (`int`), **Altura** (`float`), **Classe** (`char` - inicial) e **Status** (`boolean` - em missão).
+* **Classe:** `ExeCom0102.java`
 
-### 03) Gerenciamento de Estoque (Loja de Jogos)
-Uma loja de jogos precisa armazenar a quantidade de cópias vendidas. Escolha o tipo de dado mais adequado entre (`byte`, `short`, `int` ou `long`) para cada variável:
-* **Jogo Indie:** Vende no máximo 100 cópias.
-* **Jogo Popular Nacional:** Vende até 40.000 cópias.
-* **Jogo AAA Internacional:** Pode vender mais de 2 bilhões de cópias.
-* **Total Histórico:** Projeção para dezenas de bilhões de cópias somadas.
-* **Ação:** Crie as variáveis e imprima seus valores.
+### 03) Loja de Jogos (Estoque) [ExeCom0103]
+Escolha o tipo de dado mais adequado (`byte`, `short`, `int` ou `long`) para cada variável de vendas:
+* Jogo Indie (até 100), Nacional (até 40k), AAA (2 bi) e Total Histórico (bilhões).
+* **Classe:** `ExeCom0103.java`
 
-### 04) Simulador de Pedido de Pizza
-Crie um programa que armazene as seguintes informações de um pedido:
-* Nome da pizzaria (`String`), Sabor (`String`) e Tamanho (`char` - 'P', 'M' ou 'G').
-* Valor da pizza (`float`) e Taxa de entrega (`float`).
-* **Cálculo:** Crie uma variável `valorTotal` (`float`) somando a pizza e a taxa.
-* **Status:** A pizza tem borda recheada? (`boolean`).
-* **Saída:** Imprima o resumo completo do pedido.
+### 04) Pedido de Pizza [ExeCom0104]
+Armazene: Nome da pizzaria, Sabor, Tamanho (`char`), Valor (`float`), Taxa (`float`) e se tem Borda Recheada (`boolean`).
+* **Cálculo:** Crie uma variável `valorTotal` somando a pizza e a taxa.
+* **Classe:** `ExeCom0104.java`
 
-### 05) Frase de Efeito
-Crie uma `String` com uma frase motivacional ou engraçada que você goste (Ex: *"Sem prática, até o Batman apanha."*) e exiba-a.
+### 05) Frase de Efeito [ExeCom0105]
+Crie uma `String` com uma frase motivacional ou engraçada que você goste e exiba-a.
+* **Classe:** `ExeCom0105.java`
 
 ---
 
 ## 🔵 Tópico 02: Impressão no Console e Strings
 
-### 01) Ficha Técnica de Filme
-Crie variáveis para um filme: Nome (`String`), Ano (`int`), Duração em minutos (`int`), Nota da crítica (`float`), Inicial do título (`char`) e Sucesso de bilheteria (`boolean`).
-* **Ação:** Imprima cada variável separadamente, uma por linha.
+### 01) Ficha Técnica de Filme [ExeCom0201]
+Crie variáveis para um filme (Nome, Ano, Duração, Nota, Inicial e Sucesso) e imprima cada uma em uma linha isolada.
+* **Classe:** `ExeCom0201.java`
 
-### 02) Relatório Estruturado
-Utilizando as variáveis do exercício anterior, imprima as informações em frases completas.
-* **Exemplo:** `O filme Vingadores foi lançado em 2015 com nota 8.7.`
+### 02) Relatório Estruturado [ExeCom0202]
+Utilizando as variáveis do exercício anterior, imprima as informações em frases completas (ex: "O filme X foi lançado em Y").
+* **Classe:** `ExeCom0202.java`
 
-### 03) Concatenação Simples
-Crie as variáveis `String nome`, `int idade` e `String hobby`. Imprima uma frase única usando o operador de concatenação (`+`).
+### 03) Concatenação Simples [ExeCom0203]
+Crie as variáveis `String nome`, `int idade` e `String hobby`. Imprima uma frase única usando o operador `+`.
+* **Classe:** `ExeCom0203.java`
 
-### 04) Formatação Profissional
-Refaça o exercício anterior, mas utilize o método `System.out.format` (ou `printf`) para organizar a saída.
+### 04) Formatação Profissional [ExeCom0204]
+Refaça o exercício anterior, mas utilize o método `System.out.format` ou `printf`.
+* **Classe:** `ExeCom0204.java`
 
-### 05) Substituição Dinâmica
-Crie a String: `"Eu ALUNO XXXXX, vou aprender Java! Java não é difícil!"`.
-* **Ação:** Substitua `"ALUNO XXXXX"` pelo seu nome de forma programática e imprima.
+### 05) Substituição Dinâmica [ExeCom0205]
+Crie a String: `"Eu ALUNO XXXXX, vou aprender Java!"` e substitua `"ALUNO XXXXX"` pelo seu nome programaticamente.
+* **Classe:** `ExeCom0205.java`
 
-### 06) Letra de Música (Escape Characters)
-Crie 4 ou mais Strings, cada uma com uma linha de uma música.
-* **Ação:** Junte tudo em uma variável `letraCompleta` usando `\n` para quebrar as linhas corretamente na impressão.
+### 06) Letra de Música [ExeCom0206]
+Crie 4 Strings (linhas de uma música) e junte-as em uma variável `letraCompleta` usando `\n` para quebrar as linhas.
+* **Classe:** `ExeCom0206.java`
 
-### 07) String Builder (Format)
-Crie variáveis para seu `nome`, `horasPorDia` de estudo, `motivo` e se `acreditaQueVaiConseguir`. Use `String.format` para montar a frase final antes de imprimir.
+### 07) String.format [ExeCom0207]
+Use `String.format` para montar uma frase sobre seu nome, horas de estudo, motivo e se acredita no sucesso.
+* **Classe:** `ExeCom0207.java`
 
-### 08) Diálogo de Cinema
-Crie uma mensagem divertida inspirada em um filme (ex: Harry Potter), adaptada para programação. Use `\n` para organizar as falas no console.
+### 08) Diálogo de Cinema [ExeCom0208]
+Crie um diálogo adaptado para programação usando `\n` para organizar as falas no console.
+* **Classe:** `ExeCom0208.java`
 
-### 09) Fluxo de Erro
-Faça uma impressão proposital usando `System.err.println()` para exibir uma mensagem de erro fictícia (ex: *"Erro: Conexão com o banco de dados falhou!"*).
+### 09) Fluxo de Erro [ExeCom0209]
+Utilize `System.err.println()` para exibir uma mensagem de erro fictícia no console.
+* **Classe:** `ExeCom0209.java`
 
 ---
 
 ## ⌨️ Tópico 03: Leitura de Dados (Scanner)
 
-### 01) Entrada de Inteiros
-Peça ao usuário para digitar um número inteiro, armazene e exiba: `O número digitado foi: X`.
+### 01) Entrada de Inteiros [ExeCom0301]
+Peça ao usuário para digitar um número inteiro e exiba: `O número digitado foi: X`.
+* **Classe:** `ExeCom0301.java`
 
-### 02) Precisão Decimal
-Peça um número decimal (`float`) e exiba-o com apenas **uma casa** após a vírgula.
+### 02) Precisão Decimal [ExeCom0302]
+Peça um número decimal (`float`) e exiba-o com apenas **uma casa** após a vírgula usando `printf`.
+* **Classe:** `ExeCom0302.java`
 
-### 03) Ficha de Personagem Interativa
-Peça para o usuário digitar seu **Nome**, **Idade** e **Profissão**.
-* **Atenção:** Use `nextLine()` para textos e `nextInt()` para números. Cuidado com o "lixo" de memória ao trocar os tipos de leitura!
+### 03) Cadastro Interativo [ExeCom0303]
+Peça Nome, Idade e Profissão. Lembre-se de realizar a limpeza do buffer após ler o número inteiro.
+* **Classe:** `ExeCom0303.java`
 
-### 04) Gerador de Histórias
-Peça o `nome`, `cidade` e `comida favorita` do usuário. Exiba uma frase engraçada combinando esses elementos.
-
----
-_Elaborado por Guilherme Legal de Oliveira para fins educacionais._
+### 04) Gerador de Histórias [ExeCom0304]
+Peça o nome, cidade e comida favorita do usuário e exiba uma frase criativa combinando os dados.
+* **Classe:** `ExeCom0304.java`
