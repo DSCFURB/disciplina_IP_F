@@ -279,3 +279,289 @@ Pagamento: parcelado em 5x
   - Valores fixos (hardcoded)
 
 ---
+
+
+# 📘 Lista de Exercícios – Revisão Uni4 (Nível Avançado)
+
+---
+
+# 🏦 Uni4Rev04.java
+
+## Enunciado
+
+Um banco deseja simular operações básicas de uma conta corrente.
+
+O programa deve ler:
+
+- Saldo inicial da conta
+- Uma opção de operação escolhida pelo usuário
+
+---
+
+## Menu de opções:
+
+1 → Depósito  
+2 → Saque  
+3 → Consulta de saldo  
+4 → Aplicar rendimento  
+
+---
+
+## Regras das operações
+
+### 🔹 Depósito
+- O usuário informa o valor
+- O valor deve ser positivo
+- O valor é somado ao saldo
+
+---
+
+### 🔹 Saque
+- O usuário informa o valor
+- O valor deve ser positivo
+- Só pode realizar o saque se houver saldo suficiente
+- Caso contrário, exibir: **"Saldo insuficiente"**
+
+---
+
+### 🔹 Consulta
+- Exibir o saldo atual
+
+---
+
+### 🔹 Rendimento
+- Aplicar 5% de rendimento sobre o saldo atual
+
+---
+
+## Regras importantes
+
+- O programa deve executar **apenas uma operação**
+- Utilizar `switch-case` para controlar a escolha
+- Validar valores negativos
+
+---
+
+## Saída esperada
+
+- Mensagens claras informando a operação realizada
+- Saldo final atualizado
+
+---
+
+## Exemplos de entrada
+
+saldo: 1000  
+opção: 1  
+valor: 500  
+
+saldo: 1000  
+opção: 2  
+valor: 1200  
+
+---
+
+## Exemplos de saída
+
+Depósito realizado!  
+Saldo final: R$1500  
+
+Saldo insuficiente  
+Saldo final: R$1000  
+
+---
+
+---
+
+# 🎓 Uni4Rev05.java
+
+## Enunciado
+
+Uma instituição de ensino deseja calcular a situação final de um aluno.
+
+O programa deve ler:
+
+- Nome do aluno
+- Nota 1
+- Nota 2
+- Nota 3
+- Frequência (%)
+
+---
+
+## Regras
+
+### 🔹 Validação
+
+- Notas devem estar entre **0 e 10**
+- Frequência deve estar entre **0 e 100**
+
+---
+
+### 🔹 Cálculo da média
+
+- Média aritmética das 3 notas
+
+---
+
+### 🔹 Situação do aluno
+
+- Frequência < 75% → **Reprovado por falta**
+- Média ≥ 7 → **Aprovado**
+- Média entre 5 e 6.9 → **Recuperação**
+- Média < 5 → **Reprovado por nota**
+
+---
+
+## Regras importantes
+
+- A verificação de **falta deve ser feita primeiro**
+- Utilizar `if/else` encadeado
+
+---
+
+## Saída esperada
+
+- Nome do aluno
+- Média final
+- Situação
+
+---
+
+## Exemplos de entrada
+
+nome: João  
+notas: 7, 7, 7  
+freq: 80  
+
+nome: Ana  
+notas: 9, 9, 9  
+freq: 60  
+
+---
+
+## Exemplos de saída
+
+Aluno: João  
+Média: 7.0  
+Situação: Aprovado  
+
+Aluno: Ana  
+Média: 9.0  
+Situação: Reprovado por falta  
+
+---
+
+---
+
+# 🏨 Uni4Rev06.java
+
+## Enunciado
+
+Um hotel deseja calcular o valor da hospedagem de um cliente.
+
+O programa deve ler:
+
+- Nome do cliente
+- Tipo de quarto:
+  - S → Standard
+  - D → Deluxe
+  - L → Luxo
+- Número de diárias
+- Forma de pagamento:
+  - 1 → À vista
+  - 2 → Cartão
+
+---
+
+## Valores das diárias
+
+- Standard → R$ 100  
+- Deluxe → R$ 180  
+- Luxo → R$ 250  
+
+---
+
+## Regras
+
+### 🔹 Tipo de quarto
+- Deve ser validado usando `switch-case`
+- Caso inválido → encerrar o programa
+
+---
+
+### 🔹 Cálculo base
+- valor total = diária × quantidade de dias
+
+---
+
+### 🔹 Taxa adicional
+- Se ficar mais de 5 dias → adicionar R$ 50
+
+---
+
+### 🔹 Forma de pagamento
+
+- À vista → 10% de desconto
+- Cartão → sem desconto
+
+---
+
+## Validações
+
+- Tipo de quarto válido (S, D ou L)
+- Número de diárias maior que zero
+- Forma de pagamento válida (1 ou 2)
+
+---
+
+## Saída esperada
+
+- Nome do cliente
+- Tipo de quarto (por extenso)
+- Valor da diária
+- Valor total da hospedagem
+- Forma de pagamento
+
+---
+
+## Exemplos de entrada
+
+nome: Carlos  
+tipo: S  
+dias: 3  
+pagamento: 1  
+
+nome: Maria  
+tipo: D  
+dias: 6  
+pagamento: 2  
+
+---
+
+## Exemplos de saída
+
+Cliente: Carlos  
+Quarto: Standard  
+Total: R$270  
+
+Cliente: Maria  
+Quarto: Deluxe  
+Total: R$1130  
+
+---
+
+# 📌 Instruções Gerais
+
+- O aluno deve obrigatoriamente:
+  - Separar o código em **Entrada / Processo / Saída**
+  - Utilizar `if/else` e `switch-case`
+  - Criar **casos de teste comentados**
+  - Validar entradas
+
+- Não é permitido:
+  - Uso de laços (`for`, `while`, `do-while`)
+  - Código sem organização
+  - Valores fixos no código (hardcoded)
+
+---
