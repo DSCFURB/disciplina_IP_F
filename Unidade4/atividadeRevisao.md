@@ -281,6 +281,16 @@ O programa deve ler:
 
 ---
 
+🏨 Exercício de Revisão: Uni4Rev07.java📝 EnunciadoO "Blumenau Tech Hotel" precisa de um sistema para calcular o fechamento de conta (Checkout). O programa deve processar e validar as informações de estadia, aplicando taxas progressivas e descontos de fidelidade.O programa deve ler:Identificação: Nome do hóspede e Categoria de Fidelidade (String: "VIP", "COMUM" ou "NOVO").Hospedagem: Tipo de Aposento (Char: 'S' para Standard, 'D' para Duplo, 'L' para Luxo) e a quantidade de diárias (int).Consumo: Valor total gasto com frigobar (double).Pagamento: Forma de pagamento (int: 1 para Dinheiro/PIX, 2 para Cartão).⚖️ Regras de Negócio1. Valor da Diária (Baseado no Tipo)SiglaTipoValorSStandardR$ 150,00DDuploR$ 220,00LLuxoR$ 350,00Nota: Caso o usuário digite qualquer outro caractere, o sistema deve assumir Standard e exibir um aviso de "Tipo Inválido".2. Taxa de Serviço (Sobre o valor total das diárias)Até 4 diárias: taxa de 15%.De 5 até 10 diárias: taxa de 10%.Acima de 10 diárias: taxa de 5%.3. Desconto de Fidelidade (Sobre a soma: Diárias + Taxa + Frigobar)VIP: 15% de desconto.COMUM: 5% de desconto.NOVO: Sem desconto.4. Condição de Pagamento (Final)Dinheiro/PIX (Opção 1): Aplica 5% de desconto sobre o valor acumulado após o desconto de fidelidade.Cartão (Opção 2): Não há desconto adicional.
+
+
+
+
+
+
+
+
+
 # 📌 Instruções Gerais
 
 - Separar:
