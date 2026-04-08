@@ -281,7 +281,48 @@ O programa deve ler:
 
 ---
 
-🏨 Exercício de Revisão: Uni4Rev07.java📝 EnunciadoO "Blumenau Tech Hotel" precisa de um sistema para calcular o fechamento de conta (Checkout). O programa deve processar e validar as informações de estadia, aplicando taxas progressivas e descontos de fidelidade.O programa deve ler:Identificação: Nome do hóspede e Categoria de Fidelidade (String: "VIP", "COMUM" ou "NOVO").Hospedagem: Tipo de Aposento (Char: 'S' para Standard, 'D' para Duplo, 'L' para Luxo) e a quantidade de diárias (int).Consumo: Valor total gasto com frigobar (double).Pagamento: Forma de pagamento (int: 1 para Dinheiro/PIX, 2 para Cartão).⚖️ Regras de Negócio1. Valor da Diária (Baseado no Tipo)SiglaTipoValorSStandardR$ 150,00DDuploR$ 220,00LLuxoR$ 350,00Nota: Caso o usuário digite qualquer outro caractere, o sistema deve assumir Standard e exibir um aviso de "Tipo Inválido".2. Taxa de Serviço (Sobre o valor total das diárias)Até 4 diárias: taxa de 15%.De 5 até 10 diárias: taxa de 10%.Acima de 10 diárias: taxa de 5%.3. Desconto de Fidelidade (Sobre a soma: Diárias + Taxa + Frigobar)VIP: 15% de desconto.COMUM: 5% de desconto.NOVO: Sem desconto.4. Condição de Pagamento (Final)Dinheiro/PIX (Opção 1): Aplica 5% de desconto sobre o valor acumulado após o desconto de fidelidade.Cartão (Opção 2): Não há desconto adicional.
+Putz, você tem razão! Quando o texto é colado diretamente de um bloco de código ou sem a formatação correta de Markdown para o GitHub, ele acaba perdendo as quebras de linha e virando esse "blocão" de texto ilegível que apareceu no seu print.
+
+Para resolver isso, vou te passar agora o código Raw (puro). No GitHub, certifique-se de que o arquivo tenha a extensão .md e cole exatamente o conteúdo abaixo:
+
+Markdown
+# 🏨 Exercício de Revisão: Uni4Rev07.java
+
+## 📝 Enunciado
+O **"Blumenau Tech Hotel"** precisa de um sistema para calcular o fechamento de conta (*Checkout*). O programa deve processar e validar as informações de estadia, aplicando taxas progressivas e descontos de fidelidade.
+
+### O programa deve ler:
+1. **Identificação:** Nome do hóspede e Categoria de Fidelidade (String: `"VIP"`, `"COMUM"` ou `"NOVO"`).
+2. **Hospedagem:** Tipo de Aposento (Char: `'S'` para Standard, `'D'` para Duplo, `'L'` para Luxo) e a quantidade de diárias (int).
+3. **Consumo:** Valor total gasto com frigobar (double).
+4. **Pagamento:** Forma de pagamento (int: `1` para Dinheiro/PIX, `2` para Cartão).
+
+---
+
+## ⚖️ Regras de Negócio
+
+### 1. Valor da Diária (Baseado no Tipo)
+| Sigla | Tipo | Valor |
+|:---:|:---:|:---:|
+| **S** | Standard | R$ 150,00 |
+| **D** | Duplo | R$ 220,00 |
+| **L** | Luxo | R$ 350,00 |
+
+> **Nota:** Caso o usuário digite qualquer outro caractere, o sistema deve assumir **Standard** e exibir um aviso de "Tipo Inválido".
+
+### 2. Taxa de Serviço (Sobre o valor total das diárias)
+- **Até 4 diárias:** taxa de 15%.
+- **De 5 até 10 diárias:** taxa de 10%.
+- **Acima de 10 diárias:** taxa de 5%.
+
+### 3. Desconto de Fidelidade (Sobre a soma: Diárias + Taxa + Frigobar)
+- **VIP:** 15% de desconto.
+- **COMUM:** 5% de desconto.
+- **NOVO:** Sem desconto.
+
+### 4. Condição de Pagamento (Final)
+- **Dinheiro/PIX (Opção 1):** Aplica **5% de desconto** sobre o valor acumulado após o desconto de fidelidade.
+- **Cartão (Opção 2):** Não há desconto adicional.
 
 
 
