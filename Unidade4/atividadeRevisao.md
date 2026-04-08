@@ -286,7 +286,7 @@ Putz, você tem razão! Quando o texto é colado diretamente de um bloco de cód
 Para resolver isso, vou te passar agora o código Raw (puro). No GitHub, certifique-se de que o arquivo tenha a extensão .md e cole exatamente o conteúdo abaixo:
 
 Markdown
-# 🏨 Exercício de Revisão: Uni4Rev07.java
+# 🏨 Uni4Rev07.java
 
 ## 📝 Enunciado
 O **"Blumenau Tech Hotel"** precisa de um sistema para calcular o fechamento de conta (*Checkout*). O programa deve processar e validar as informações de estadia, aplicando taxas progressivas e descontos de fidelidade.
