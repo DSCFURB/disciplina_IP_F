@@ -8,88 +8,42 @@
 
 Uma empresa deseja automatizar o cálculo da folha de pagamento de seus funcionários.
 
-Para isso, será necessário desenvolver um programa que leia as seguintes informações:
+O programa deve ler:
 
 - Nome do funcionário
-- Quantidade de horas trabalhadas no mês (valor inteiro)
-- Valor pago por hora trabalhada (valor real)
+- Quantidade de horas trabalhadas no mês
+- Valor pago por hora
 
 ---
 
-## Regras de cálculo
+## Regras
 
-O cálculo do salário deve obedecer às seguintes regras:
+- Até 160 horas → pagamento normal  
+- De 161 até 200 → horas extras com acréscimo de 50%  
+- Acima de 200 → horas extras com acréscimo de 100%  
 
-### 🔹 Salário base
-- Até **160 horas trabalhadas** → pagamento normal
-
-### 🔹 Horas extras
-- De **161 até 200 horas** → horas excedentes com acréscimo de **50%**
-- Acima de **200 horas** →
-  - As primeiras 40 horas extras (até 200) recebem **50%**
-  - As horas excedentes recebem **100%**
-
----
-
-## Descontos
-
-Após calcular o salário bruto, aplicar:
-
-- INSS: **8% sobre o salário bruto**
-- Imposto de Renda:
-  - Aplicado somente se o salário bruto for **maior que R$ 3000,00**
-  - Alíquota de **10%**
-
----
-
-## Saída esperada
-
-O programa deve exibir:
-
-- Nome do funcionário
-- Salário bruto
-- Valor do desconto de INSS
-- Valor do desconto de IR (se houver)
-- Salário líquido
-
----
-
-## Validações
-
-- As horas trabalhadas não podem ser negativas
-- O valor da hora deve ser maior que zero
+### Descontos:
+- INSS: 8%
+- IR: 10% (se salário > 3000)
 
 ---
 
 ## Exemplos de entrada
 
-nome: João  
-horas: 160  
-valorHora: 10  
-
-nome: Maria  
-horas: 180  
-valorHora: 20  
-
-nome: Carlos  
-horas: 220  
-valorHora: 25  
+| Nome   | Horas | Valor Hora |
+|--------|------|------------|
+| João   | 160  | 10         |
+| Maria  | 180  | 20         |
+| Carlos | 220  | 25         |
 
 ---
 
 ## Exemplos de saída
 
-Funcionário: João  
-Salário bruto: 1600.00  
-INSS: 128.00  
-IR: 0.00  
-Salário líquido: 1472.00  
-
-Funcionário: Maria  
-Salário bruto: 3800.00  
-INSS: 304.00  
-IR: 380.00  
-Salário líquido: 3116.00  
+| Funcionário | Salário Bruto | INSS  | IR    | Salário Líquido |
+|------------|--------------|------|------|----------------|
+| João       | 1600.00      | 128  | 0    | 1472.00        |
+| Maria      | 3800.00      | 304  | 380  | 3116.00        |
 
 ---
 
@@ -99,80 +53,43 @@ Salário líquido: 3116.00
 
 ## Enunciado
 
-Um sistema de monitoramento de trânsito precisa calcular automaticamente as infrações de velocidade.
+Um sistema de trânsito deve calcular multas com base na velocidade.
 
 O programa deve ler:
 
-- Velocidade máxima permitida na via (km/h)
-- Velocidade registrada do veículo (km/h)
+- Velocidade permitida
+- Velocidade do veículo
 
 ---
 
 ## Regras
 
-O cálculo da infração deve seguir:
-
-- Se a velocidade for **menor ou igual ao limite** → não há infração
-- Se ultrapassar o limite:
-
-### 🔹 Classificação da infração
-
-- Até **20% acima do limite** → Multa leve (R$ 130,00)
-- De **21% até 50% acima** → Multa grave (R$ 195,00)
-- Acima de **50%** → Multa gravíssima (R$ 880,00 + suspensão da CNH)
-
----
-
-## Saída esperada
-
-O programa deve mostrar:
-
-- Situação (sem multa / leve / grave / gravíssima)
-- Percentual de excesso
-- Valor da multa
-
----
-
-## Validações
-
-- A velocidade limite deve ser maior que zero
-- A velocidade do veículo não pode ser negativa
+- Até o limite → sem multa  
+- Até 20% acima → leve (R$130)  
+- Até 50% acima → grave (R$195)  
+- Acima → gravíssima (R$880 + suspensão)
 
 ---
 
 ## Exemplos de entrada
 
-limite: 60  
-velocidade: 60  
-
-limite: 60  
-velocidade: 72  
-
-limite: 60  
-velocidade: 100  
-
-limite: 60  
-velocidade: 130  
+| Limite | Velocidade |
+|--------|------------|
+| 60     | 60         |
+| 60     | 72         |
+| 60     | 100        |
+| 60     | 130        |
 
 ---
 
 ## Exemplos de saída
 
-Situação: Sem multa  
-Excesso: 0%  
-Valor: R$0,00  
-
-Situação: Multa leve  
-Excesso: 20%  
-Valor: R$130,00  
-
-Situação: Multa grave  
-Excesso: 66%  
-Valor: R$195,00  
-
-Situação: Multa gravíssima (CNH suspensa)  
-Excesso: 116%  
-Valor: R$880,00  
+| Situação                          | Excesso | Multa |
+|----------------------------------|--------|------|
+| Sem multa                        | 0%     | 0    |
+| Multa leve                       | 20%    | 130  |
+| Multa grave                      | 66%    | 195  |
+| Multa gravíssima (CNH suspensa)  | 116%   | 880  |
 
 ---
 
@@ -182,104 +99,50 @@ Valor: R$880,00
 
 ## Enunciado
 
-Uma loja deseja automatizar o cálculo do valor final de compras com base na forma de pagamento escolhida pelo cliente.
+Uma loja deseja calcular o valor final da compra com base na forma de pagamento.
 
 O programa deve ler:
 
-- Valor total da compra
-- Forma de pagamento:
-  - 1 → pagamento à vista
-  - 2 → pagamento parcelado
+- Valor da compra
+- Forma de pagamento (1 = à vista, 2 = parcelado)
 
-Caso o pagamento seja parcelado, o programa também deve ler:
-
-- Número de parcelas
+Se parcelado, ler número de parcelas.
 
 ---
 
 ## Regras
 
-### 🔹 Pagamento à vista
+### À vista:
+- Até 100 → 5% desconto
+- Acima → 10%
 
-- Compras de até R$ 100,00 → desconto de **5%**
-- Compras acima de R$ 100,00 → desconto de **10%**
-
----
-
-### 🔹 Pagamento parcelado
-
-- Até **3 parcelas** → sem juros
-- Acima de **3 parcelas** → acréscimo de **20% sobre o valor total**
-
----
-
-## Saída esperada
-
-O programa deve exibir:
-
-- Valor final da compra
-- Forma de pagamento utilizada
-- Quantidade de parcelas (se houver)
-
----
-
-## Validações
-
-- O valor da compra deve ser maior que zero
-- A forma de pagamento deve ser válida (1 ou 2)
-- O número de parcelas deve ser maior que zero
+### Parcelado:
+- Até 3x → sem juros
+- Acima → +20%
 
 ---
 
 ## Exemplos de entrada
 
-valor: 80  
-forma: 1  
-
-valor: 200  
-forma: 1  
-
-valor: 200  
-forma: 2  
-parcelas: 2  
-
-valor: 200  
-forma: 2  
-parcelas: 5  
+| Valor | Forma | Parcelas |
+|------|------|----------|
+| 80   | 1    | -        |
+| 200  | 1    | -        |
+| 200  | 2    | 2        |
+| 200  | 2    | 5        |
 
 ---
 
 ## Exemplos de saída
 
-Valor final: R$76,00  
-Pagamento: à vista  
-
-Valor final: R$180,00  
-Pagamento: à vista  
-
-Valor final: R$200,00  
-Pagamento: parcelado em 2x  
-
-Valor final: R$240,00  
-Pagamento: parcelado em 5x  
+| Valor Final | Forma de Pagamento |
+|------------|-------------------|
+| 76.00      | À vista           |
+| 180.00     | À vista           |
+| 200.00     | Parcelado 2x      |
+| 240.00     | Parcelado 5x      |
 
 ---
-
-# 📌 Instruções Gerais
-
-- O aluno deve obrigatoriamente:
-  - Separar o código em **Entrada / Processo / Saída**
-  - Utilizar **estrutura condicional (if/else)**
-  - Criar **testes no final do código**
-  - Comentar o código adequadamente
-
-- Não é permitido:
-  - Código sem organização
-  - Falta de testes
-  - Valores fixos (hardcoded)
-
----
-
 
 ---
 
@@ -287,85 +150,48 @@ Pagamento: parcelado em 5x
 
 ## Enunciado
 
-Um banco deseja simular operações básicas de uma conta corrente.
+Um banco deseja simular operações em conta corrente.
 
 O programa deve ler:
 
-- Saldo inicial da conta
-- Uma opção de operação escolhida pelo usuário
+- Saldo inicial
+- Opção de operação
 
 ---
 
-## Menu de opções:
+## Opções
 
 1 → Depósito  
 2 → Saque  
-3 → Consulta de saldo  
-4 → Aplicar rendimento  
+3 → Consulta  
+4 → Rendimento  
 
 ---
 
-## Regras das operações
+## Regras
 
-### 🔹 Depósito
-- O usuário informa o valor
-- O valor deve ser positivo
-- O valor é somado ao saldo
-
----
-
-### 🔹 Saque
-- O usuário informa o valor
-- O valor deve ser positivo
-- Só pode realizar o saque se houver saldo suficiente
-- Caso contrário, exibir: **"Saldo insuficiente"**
-
----
-
-### 🔹 Consulta
-- Exibir o saldo atual
-
----
-
-### 🔹 Rendimento
-- Aplicar 5% de rendimento sobre o saldo atual
-
----
-
-## Regras importantes
-
-- O programa deve executar **apenas uma operação**
-- Utilizar `switch-case` para controlar a escolha
-- Validar valores negativos
-
----
-
-## Saída esperada
-
-- Mensagens claras informando a operação realizada
-- Saldo final atualizado
+- Depósito: valor positivo soma ao saldo  
+- Saque: verificar saldo disponível  
+- Consulta: mostrar saldo  
+- Rendimento: +5%  
 
 ---
 
 ## Exemplos de entrada
 
-saldo: 1000  
-opção: 1  
-valor: 500  
-
-saldo: 1000  
-opção: 2  
-valor: 1200  
+| Saldo Inicial | Opção | Valor |
+|--------------|------|------|
+| 1000         | 1    | 500  |
+| 1000         | 2    | 1200 |
 
 ---
 
 ## Exemplos de saída
 
-Depósito realizado!  
-Saldo final: R$1500  
-
-Saldo insuficiente  
-Saldo final: R$1000  
+| Operação | Resultado           | Saldo Final |
+|----------|--------------------|------------|
+| Depósito | Sucesso            | 1500       |
+| Saque    | Saldo insuficiente | 1000       |
 
 ---
 
@@ -375,78 +201,40 @@ Saldo final: R$1000
 
 ## Enunciado
 
-Uma instituição de ensino deseja calcular a situação final de um aluno.
+Um sistema deve calcular a situação de um aluno.
 
 O programa deve ler:
 
-- Nome do aluno
-- Nota 1
-- Nota 2
-- Nota 3
-- Frequência (%)
+- Nome
+- 3 notas
+- Frequência
 
 ---
 
 ## Regras
 
-### 🔹 Validação
-
-- Notas devem estar entre **0 e 10**
-- Frequência deve estar entre **0 e 100**
-
----
-
-### 🔹 Cálculo da média
-
-- Média aritmética das 3 notas
-
----
-
-### 🔹 Situação do aluno
-
-- Frequência < 75% → **Reprovado por falta**
-- Média ≥ 7 → **Aprovado**
-- Média entre 5 e 6.9 → **Recuperação**
-- Média < 5 → **Reprovado por nota**
-
----
-
-## Regras importantes
-
-- A verificação de **falta deve ser feita primeiro**
-- Utilizar `if/else` encadeado
-
----
-
-## Saída esperada
-
-- Nome do aluno
-- Média final
-- Situação
+- Frequência < 75 → reprovado por falta  
+- Média ≥ 7 → aprovado  
+- Média ≥ 5 → recuperação  
+- Senão → reprovado  
 
 ---
 
 ## Exemplos de entrada
 
-nome: João  
-notas: 7, 7, 7  
-freq: 80  
-
-nome: Ana  
-notas: 9, 9, 9  
-freq: 60  
+| Nome | Nota 1 | Nota 2 | Nota 3 | Frequência |
+|------|-------|-------|-------|-----------|
+| João | 7     | 7     | 7     | 80        |
+| Ana  | 9     | 9     | 9     | 60        |
 
 ---
 
 ## Exemplos de saída
 
-Aluno: João  
-Média: 7.0  
-Situação: Aprovado  
-
-Aluno: Ana  
-Média: 9.0  
-Situação: Reprovado por falta  
+| Aluno | Média | Situação              |
+|------|------|----------------------|
+| João | 7.0  | Aprovado             |
+| Ana  | 9.0  | Reprovado por falta  |
 
 ---
 
@@ -456,110 +244,60 @@ Situação: Reprovado por falta
 
 ## Enunciado
 
-Um hotel deseja calcular o valor da hospedagem de um cliente.
+Um hotel deseja calcular o valor da hospedagem.
 
 O programa deve ler:
 
-- Nome do cliente
-- Tipo de quarto:
-  - S → Standard
-  - D → Deluxe
-  - L → Luxo
-- Número de diárias
-- Forma de pagamento:
-  - 1 → À vista
-  - 2 → Cartão
-
----
-
-## Valores das diárias
-
-- Standard → R$ 100  
-- Deluxe → R$ 180  
-- Luxo → R$ 250  
+- Nome
+- Tipo de quarto (S/D/L)
+- Diárias
+- Forma de pagamento
 
 ---
 
 ## Regras
 
-### 🔹 Tipo de quarto
-- Deve ser validado usando `switch-case`
-- Caso inválido → encerrar o programa
-
----
-
-### 🔹 Cálculo base
-- valor total = diária × quantidade de dias
-
----
-
-### 🔹 Taxa adicional
-- Se ficar mais de 5 dias → adicionar R$ 50
-
----
-
-### 🔹 Forma de pagamento
-
-- À vista → 10% de desconto
-- Cartão → sem desconto
-
----
-
-## Validações
-
-- Tipo de quarto válido (S, D ou L)
-- Número de diárias maior que zero
-- Forma de pagamento válida (1 ou 2)
-
----
-
-## Saída esperada
-
-- Nome do cliente
-- Tipo de quarto (por extenso)
-- Valor da diária
-- Valor total da hospedagem
-- Forma de pagamento
+- S = 100 | D = 180 | L = 250  
+- Mais de 5 dias → +50  
+- À vista → -10%  
 
 ---
 
 ## Exemplos de entrada
 
-nome: Carlos  
-tipo: S  
-dias: 3  
-pagamento: 1  
-
-nome: Maria  
-tipo: D  
-dias: 6  
-pagamento: 2  
+| Nome   | Tipo | Diárias | Pagamento |
+|--------|------|--------|----------|
+| Carlos | S    | 3      | 1        |
+| Maria  | D    | 6      | 2        |
 
 ---
 
 ## Exemplos de saída
 
-Cliente: Carlos  
-Quarto: Standard  
-Total: R$270  
-
-Cliente: Maria  
-Quarto: Deluxe  
-Total: R$1130  
+| Cliente | Quarto   | Total |
+|--------|---------|------|
+| Carlos | Standard | 270  |
+| Maria  | Deluxe   | 1130 |
 
 ---
 
 # 📌 Instruções Gerais
 
-- O aluno deve obrigatoriamente:
-  - Separar o código em **Entrada / Processo / Saída**
-  - Utilizar `if/else` e `switch-case`
-  - Criar **casos de teste comentados**
-  - Validar entradas
+- Separar:
+  - Entrada
+  - Processo
+  - Saída
 
-- Não é permitido:
-  - Uso de laços (`for`, `while`, `do-while`)
-  - Código sem organização
-  - Valores fixos no código (hardcoded)
+- Usar:
+  - `if/else`
+  - `switch-case`
 
----
+- Obrigatório:
+  - Testes comentados
+  - Validação
+  - Comentários explicando:
+    - algoritmo
+    - entradas
+    - processamento
+    - saídas
+    - testes de mesa
