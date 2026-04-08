@@ -281,8 +281,6 @@ Pagamento: parcelado em 5x
 ---
 
 
-# 📘 Lista de Exercícios – Revisão Uni4 (Nível Avançado)
-
 ---
 
 # 🏦 Uni4Rev04.java
