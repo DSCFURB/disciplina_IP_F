@@ -253,7 +253,7 @@ Dadas as coordenadas (X e Y) de um Ponto, você deve informar em qual quadrante 
 > Indefinido, se X ou Y forem zero
 
 Para resolver este problema pode se utilizar do algoritmo descrito no fluxograma:  
-![Uni4Exe19](fluxogramas/Uni4Exe19.svg "Uni4Exe19")  
+![Uni4Exe19](fluxogramas/Uni4Exe19.png "Uni4Exe19")  
 
 | Exemplos de entrada | Exemplos de saída |
 | -------- | -------- |
