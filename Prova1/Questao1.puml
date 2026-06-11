@@ -1,0 +1,35 @@
+@startuml
+skinparam conditionStyle inside
+start
+:Ler vendasMensais;
+:Ler tempoCasaAnos;
+:Ler possuiCertificacao;
+:comissao = vendasMensais * 0.05;
+
+if (tempoCasaAnos > 5?) then (Sim)
+    :comissao = comissao + 200;
+else (Não)
+endif
+
+if (vendasMensais >= 10000?) then (Sim)
+    if (possuiCertificacao == true?) then (Sim)
+        :resultado = "Promovido";
+        :comissao = comissao * 1.10;
+    else (Não)
+        :resultado = "Aguardando Certificação";
+    endif
+else (Não)
+    if (vendasMensais >= 5000?) then (Sim)
+        :resultado = "Manter Plano";
+    else (Não)
+        if (vendasMensais < 2000?) then (Sim)
+            :resultado = "Treinamento Obrigatório";
+        else (Não)
+            :resultado = "Manter Plano";
+        endif
+    endif
+endif
+
+:Escrever resultado e comissao;
+stop
+@enduml

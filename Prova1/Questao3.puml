@@ -1,0 +1,26 @@
+@startuml
+skinparam conditionStyle inside
+start
+:Ler entrada;
+:entrada = entrada.toUpperCase();
+
+if (entrada.length() == 1?) then (Sim)
+    :c = entrada.charAt(0);
+    if (c == 'P'?) then (Sim)
+        :escreva "Papel";
+    else if (c == 'M'?) then (Sim)
+        :escreva "Metal";
+    else if (c == 'V'?) then (Sim)
+        :escreva "Vidro";
+    else (Não)
+        :escreva "Código Desconhecido";
+    endif
+else (Não)
+    if (entrada.equals("PL")?) then (Sim)
+        :escreva "Plástico";
+    else (Não)
+        :escreva "Código Desconhecido";
+    endif
+endif
+stop
+@enduml
