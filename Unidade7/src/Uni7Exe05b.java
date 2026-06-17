@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-public class Uni6Exe05 {
+public class Uni7Exe05b {
 
-  private Uni6Exe05() {
+  private Uni7Exe05b() {
     Scanner teclado = new Scanner(System.in);
 
     String respostasRapaz[] = new String[5];
@@ -72,7 +72,7 @@ public class Uni6Exe05 {
   }
 
   public static void main(String[] args) {
-    new Uni6Exe05();
+    new Uni7Exe05b();
   }
 
 }
